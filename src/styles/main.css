@@ -1,0 +1,83 @@
+@import "tailwindcss/utilities" important;
+@import "tailwindcss/theme" important;
+
+/* No preflight — this CSS loads on all admin pages.
+   Preflight resets would break WP default admin styles. */
+
+/* Make #wpbody a flex row — sidebar + content side by side */
+#wpbody.snel-media-layout {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+#wpbody.snel-media-layout > #wpbody-content {
+	flex: 1;
+	min-width: 0;
+}
+
+/* Sidebar container — sticky to top like FileBird */
+#snel-media-folders {
+	position: sticky;
+	top: 32px;
+	height: calc(100vh - 32px);
+	display: flex;
+	flex-direction: column;
+	z-index: 999;
+}
+
+/* Modal layout — sidebar inside .media-frame-menu */
+.snel-modal .media-frame .media-frame-menu {
+	width: 320px !important;
+	bottom: unset !important;
+	height: 100% !important;
+	display: block !important;
+	overflow: hidden !important;
+}
+
+.snel-modal .media-frame .media-frame-menu .media-menu {
+	display: flex !important;
+	flex-direction: column !important;
+	height: calc(100% - 50px) !important;
+	position: unset !important;
+	padding: 50px 0 0 !important;
+	overflow: hidden !important;
+}
+
+.snel-modal .media-frame .media-frame-title,
+.snel-modal .media-frame .media-frame-router,
+.snel-modal .media-frame .media-frame-content,
+.snel-modal .media-frame .media-frame-toolbar {
+	left: 320px !important;
+}
+
+.snel-modal .snel-modal-sidebar {
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0;
+	border-top: 1px solid #dcdcde;
+}
+
+.snel-modal .snel-modal-sidebar *,
+.snel-modal .snel-modal-sidebar *::before,
+.snel-modal .snel-modal-sidebar *::after {
+	box-sizing: border-box !important;
+}
+
+/* Drag-and-drop hover state */
+[data-folder-id].snel-drop-hover {
+	background-color: #e0edfa !important;
+	outline: 2px solid #2271b1;
+	outline-offset: -2px;
+	border-radius: 4px;
+}
+
+/* Snackbar positioning */
+.snel-media-snackbar {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100001;
+}

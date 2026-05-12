@@ -1,0 +1,8 @@
+{
+    "require": {
+        "yahnis-elsts/plugin-update-checker": "^5.0"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

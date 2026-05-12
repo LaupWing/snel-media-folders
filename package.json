@@ -1,0 +1,14 @@
+{
+  "name": "snel-media-folders",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build src/index.js --output-path=build",
+    "start": "wp-scripts start src/index.js --output-path=build"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "@wordpress/scripts": "^27.9.0",
+    "tailwindcss": "^4.1.8"
+  }
+}
