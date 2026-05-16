@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Snel Media Folders
  * Description: Folder sidebar for the WordPress Media Library. Drag, drop, organize.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Snelstack
  * Author URI: https://snelstack.com
  * License: GPL v2 or later
@@ -23,7 +23,7 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
     );
 }
 
-define( 'SNEL_MEDIA_FOLDERS_VERSION', '1.0.0' );
+define( 'SNEL_MEDIA_FOLDERS_VERSION', '1.0.1' );
 define( 'SNEL_MEDIA_FOLDERS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SNEL_MEDIA_FOLDERS_URL', plugin_dir_url( __FILE__ ) );
 
